@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Blue.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="syntaxHighlighter.css"></link>
+    <style type="text/css">
+      	#lineNums{
+	        width: 40px;
+	        border: 0.5px solid rgb(169, 169, 169);
+	        font-family: monospace;
+	        font-size: 13.333px;
+	        padding: 3.5px;
+	        color: white;
+			background: #363838;
+      	}
+      	#code{
+	        padding: 2px;
+	        background-color: transparent;
+	        color: transparent;
+	        caret-color: white;
+	        position: absolute;
+	        border: none;
+	        overflow: visible;
+	        outline: none;
+	        overflow: hidden;
+	        resize: none;
+      	}
+      	#lineNums, #code{
+	        float: left;
+	        border-radius: 2px;
+	        box-shadow: 0 0 2px;
+	        line-height: 1.15;
+      	}
+      	button{
+	        font-family: monospace;
+	        background: white;
+	        border: 0.5px solid rgb(169, 169, 169);
+	        border-radius: 2px;
+	        padding: 5px;
+	        box-shadow: 0 0 2px;
+      	}
+      	body{
+	        background: #DFF9FD;
+	        font-family: monospace;
+      	}
+      	.project{
+	        text-align: left;
+      	}
+      	#runButton{
+	        background: #004B59;
+	        color: white;
+	        border-color: #004B59;
+	        box-shadow: 0 0 2px black;
+	        width: 150px;
+	    }
+      	h1{
+	        font-family: monospace;
+	        font-border: 1px solid black;
+	        text-shadow: 0 0 1px black;
+	        font-weight: normal;
+      	}
+      	#helpModal{
+	        position: absolute;
+	        font-family: monospace;
+	        box-shadow: 0 0 100px black;
+	        background: white;
+	        padding: 100px;
+	        width: 50%;
+	        top: 20%;
+	        left: 10%;
+	        display: none;
+      	}
+      	#codeHighlight{
+	      	padding: 2px;
+	      	padding-left: 51px;
+	      	font: 400 13.3333px monospace;
+	      	line-height: 1.15;
+      	}
+      	#copy{
+      		width: 1px;
+      		height: 1px;
+      		border: none;
+      		resize: none;
+      		padding: 0px;
+      	}
+      	#description{
+      		max-width: 800px;
+      	}
+    </style>
+  </head>
+  <body>
+    <div id="chooseProject">
+      	<h1>Welcome To Blue</h1>
+      	<p id="description"> Many people learn to code using complicated programming languages that make it difficult to begin. Languages such as JavaScript, Python, Java, or C++ commonly require downloading lots of applications onto your computer and getting really technical right away. Creating graphics, user inputs (arrow keys, clicking), and other important game features requires even more <span title="Extra code that seems unnecessary. For example, airplanes might be faster than cars, but there is a lot of overhead because of security, baggage claim, etc." style="color: grey; font-weight: bold;">overhead (hover over me)</span>! With Blue, you can create games in just 12 lines of code that could take hundreds of lines in other languages. Blue allows you to create a complex game without having to know a lot of programming. It makes coding more fun and fulfilling even in the beginning! Since Blue is 100% in the browser, you don't need to download anything. It is also easy to compile Blue code into HTML, which can create a real, publishable website!</p>
+      	<br><br>
+      	<button onclick="addProject()">New Project</button>
+      	<button onclick="window.open('help.html')"> Help </button>
+     	<div id="allProjectButtons"></div>
+    </div>
+
+    <div id="editMode">
+	    <button onclick="run()" id="runButton"> RUN </button>
+	    <button onclick="window.open('help.html')"> HELP </button>
+	    <button onclick="exportToWebsite()"> EXPORT TO WEBSITE </button>
+    	<textarea id="copy"></textarea>
+	    <button onclick="location.reload()"> ALL PROJECTS </button><br>
+	    <div id="lineNums"></div>
+	    <textarea id="code" spellcheck="false" placeholder="Put all of your code here!
+
+ฅ^•ᴥ•^ฅ"></textarea>
+	    <code id="codeHighlight"></code>
+    </div>
+
+    <div id="runMode">
+      	<button onclick="backToEdit()">Back to Edit</button>
+      	<canvas id="canvas"></canvas>
+    </div>
+
+    <div id="helpModal">
+      	<h2>First Time Using Blue?</h2> 
+      	Here's a page full of documentation, tutorials, syntax, and more!<br>
+      	<button onclick="window.open('help.html')"> Help Page </button><br>
+      	<button onclick="el('helpModal').style.display = 'none'">Close</button>
+    </div>
+
+
+    <script src="syntaxHighlighter.js"></script>
+    <script src="library.js"></script>
+    <script src="script.js"></script>
+    <script src="convertToJs.js"></script>
+    <script src="runAndSave.js"></script>
+  </body>
+</html>

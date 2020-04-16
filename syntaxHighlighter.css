@@ -1,0 +1,49 @@
+/*You can change these colors*/
+.pink{
+	color: #FF237A;
+}
+.purple{
+	color: #AE60F6;
+}
+.blueItal{
+	color: #6DC5FB;
+	font-style: italic;
+}
+.blue{
+	color: #6DC5FB;
+}
+.green{
+	color: #A6E06C;
+	font-weight: 1000;
+	text-shadow: 0 0 3px #A6E06C;
+}
+.yellow{
+	color: #F3E688;
+}
+.grey{
+	color: #B0B0B0;
+}
+.orangeItal{
+	color: #F3A508;
+	font-style: italic;
+}
+.code{
+	font-size: 14px;
+	color: white;
+	background: #363838;
+}
+
+/*don't change this stuff*/
+.grey span{
+	color: #B0B0B0;
+}
+.yellow span{
+	color: #F3E688;
+}
+div{
+	margin: 0;
+}
+.code{
+	padding: 5px;
+	display: block;
+}

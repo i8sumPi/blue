@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TEST</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+h1{
+	font-family: monospace;
+}
+	</style>
+</head>
+<body>
+	<h1 id="header">This File Doesn't Exist</h1>
+	<code style="border-radius: 5px;" id="code"></code>
+	<link rel="stylesheet" type="text/css" href="syntaxHighlighter.css"></link>
+<script type="text/javascript">
+var newScript = document.createElement("script");
+newScript.src = "demos/"+location.search.slice(1)+".js";
+document.body.appendChild(newScript);
+newScript.onload = function(){
+	document.getElementById("code").innerHTML = highlight(theCode);
+	document.getElementById("header").innerHTML = location.search.slice(1);
+}
+</script>
+<script type="text/javascript" src="syntaxHighlighter.js"></script>
+</body>
+</html>

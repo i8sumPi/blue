@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blue.js Help</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		body{
+			font-family: monospace;
+			line-height: 1.6;
+		}
+		h1{
+			text-shadow: 0 0 1px;
+			font-size: 25px;
+		}
+		#top{
+			font-size: 30px;
+		}
+		.inlineCode, code{
+			background-color: #DADADA;
+			border-radius: 3px;
+			padding: 2px;
+			box-shadow: 0 0 1.5px;
+		}
+		code{
+			padding: 7px;
+			margin: 7px 0px;
+			line-height: 1.3;
+			display: block;
+		}
+		.pageLink{
+			color: white;
+			display: block;
+			margin-bottom: 0.7em;
+			text-decoration: none;
+			line-height: 1em;
+		}
+		.pageLink:hover{
+			text-decoration: underline;
+		}
+		.hidden{
+			background-color: #DFF9FD;
+			color: #DFF9FD;
+			display: inline;
+			padding: 5px;
+			border-radius: 2px;
+			box-shadow: 0 0 1.5px #004B59;
+			transition: 0.4s;
+		}
+		.hidden .inlineCode{
+			background-color: #DFF9FD;
+		}
+		.hidden:hover{
+			color: black;
+			padding: 5px 15px;
+		}
+		table{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		td{
+			box-shadow: 0 0 1.5px;
+			border-radius: 2px;
+			padding: 5px;
+		}
+		.container{
+			box-shadow: 0 0 5px;
+			padding: 15px;
+			border-radius: 3px;
+			background: #F5F5F5;
+		}
+		#side{
+			width: 20%;
+			background: #004B59;
+			padding: 10px;
+			position: fixed;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+		#main{
+			width: 77%;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+<div id="side">
+	<h2 style="color: white;">All the different tutorials</h2>
+	<a class="pageLink" href="#comment"> Comments</a>
+	<a class="pageLink" href="#console"> Console: print information </a>
+	<a class="pageLink" href="#variables"> Variables: store information </a>
+	<a class="pageLink" href="#operations"> Operations</a>
+	<a class="pageLink" href="#math"> Math </a>
+	<a class="pageLink" href="#if"> If and Else </a>
+	<a class="pageLink" href="#ask"> Ask and Alert </a>
+	<a class="pageLink" href="#when"> When </a>
+	<a class="pageLink" href="#forever"> Forever Loop </a>
+	<a class="pageLink" href="#repeatEvery"> RepeatEvery Loop </a>
+	<a class="pageLink" href="#for"> ForEach Loop </a>
+	<a class="pageLink" href="#Characters"> Creating Characters: <br>&nbsp;&nbsp;&nbsp;Rectangles </a>
+	<a class="pageLink" href="#circle">&nbsp;&nbsp; Circles </a>
+	<a class="pageLink" href="#text">&nbsp;&nbsp; Text </a>
+	<a class="pageLink" href="#charactersInfo">&nbsp;&nbsp; Things it can do </a>
+	<a class="pageLink" href="#customProp"> Custom Properties </a>
+	<a class="pageLink" href="#moreDataTypes"> More Data Types </a>
+	<a class="pageLink" href="#mouse"> Mouse </a>
+	<a class="pageLink" href="#distances"> Touching and Distances </a>
+	<a class="pageLink" href="#custom"> Custom Character </a>
+	<a class="pageLink" href="#rect()">&nbsp;&nbsp; Rect </a>
+	<a class="pageLink" href="#oval()">&nbsp;&nbsp; Oval </a>
+	<a class="pageLink" href="#text()">&nbsp;&nbsp; Text </a>
+	<a class="pageLink" href="#polygon()">&nbsp;&nbsp; Polygon </a>
+	<a class="pageLink" href="#clones"> Clones </a>
+	<a class="pageLink" href="#projects"> Projects </a>
+</div>
+<div id="main">
+<h1 id="top"> Welcome To the Blue Help Page</h1>
+<hr>
+You can read through the entire page as a tutorial for blue.js, or you can read through different parts while making your projects! View the <a href="#projects">projects</a> section for inspiration!
+<br><br>
+<div class="container"  id="comment">
+	<h1> Commenting </h1>
+	<span class="inlineCode">//</span> makes a comment, or code that doesn't run. Any code that is light grey is commented out.
+	<code> //xd fcgvh jkn mljnh bgvf cxdr fch</code>
+	The code above does nothing and has no errors because the code is commented out. Comments are important so other people can understand your code if you want to show it to them. 
+	For example, a comment could be used like this:
+	<code>
+	//Display pi every second:
+	repeatEvery 1
+	|console.log(PI); //pi
+	</code>
+	You don't have to know how the above code works; it is just an example of how to use comments
+</div>
+<br><br><br>
+
+<div class="container" id="console">
+	<h1>Console</h1>
+	Open the console with ctrl+shift+i, or right click and then click inspect. You should see different options on the top, such as 
+	<span class="inlineCode">Elements</span>, <span class="inlineCode">Console</span> and <span class="inlineCode">Sources</span>. Click on <span class="inlineCode">Console</span>. <br><br>
+	You can write things down in the console when you run a program using 
+	<code>
+	console.log("put whatever text here!");
+	console.log(100);
+	</code>
+	Notice that the console shows which line it is coming from on the right side.
+</div>
+<br><br><br>
+
+<div class="container" id="variables">
+	<h1>Variables</h1>
+	Variables store information. To define a variable, start with the word <span class="inlineCode">var</span>:
+	<code>var myVariable = 0</code><br>
+	Whenever you write <span class="inlineCode">myVariable</span>, Blue knows that you mean 0. 
+	Now, you don't have to use var again when dealing with myVariable. 
+	<code>var myVariable = 0;
+		myVariable = myVariable + 1
+	console.log(myVariable);</code>
+	Now, what do you expect to be printed in the console? <div class="hidden">1</div><br><br>
+	<code>var myVariable = 1;
+		myVariable = myVariable+4;
+		var secondVariable = myVariable/2; 
+	console.log(secondVariable+myVariable);</code>
+	Now, what do you expect to be printed in the console? <div class="hidden">7.5</div>
+	<br><br>
+	<h2>Simple Data Types</h2>
+	Variables can store many types of information. Each of those types is called a data type. Right now, we will see a few simple data types which is all we need right now.
+	<table>
+		<tr>
+			<td>Numbers</td>
+			<td>This can store numbers like 5, 3.14159, -100, 518e8</td>
+		</tr>
+		<tr>
+			<td>Strings</td>
+			<td>Strings are used to store text. In order to tell blue you are talking about text, not code, use <span class="inlineCode">""</span> or <span class="inlineCode">''</span>. For example,
+				<code>var myVar = "hello world";
+				console.log(myVar);
+				console.log("myVar")</code>
+				<div class="hidden" style="display: inline-block;"> hello world <br> myVar</div>
+			</td>
+		</tr>
+		<tr>
+			<td>Booleans</td>
+			<td>Booleans store <span class="inlineCode">true</span> or <span class="inlineCode">false</span>.
+				For example,
+				<code>var x = 1<2;
+					console.log(x);</code>
+				Displays <span class="inlineCode">true</span> in the console.
+			</td>
+		</tr>
+	</table>
+</div>
+<br><br><br>
+
+<div class="container" id="operations">
+	<h1>Operations</h1>
+	<table>
+		<tr><td>+, -, *, /</td>
+			<td>These operations are just like in math</td>
+		</tr>
+		<tr><td>**</td>
+			<td>Exponents</td>
+		</tr>
+		<tr><td>x += 5;</td>
+			<td>Adds 5 to the value of x. Equivalent to x = x+5;</td>
+		</tr>
+		<tr><td>x -= 5;</td>
+			<td>Subtracts 5 from the value of x. Equivalent to x = x-5;</td>
+		</tr>
+		<tr><td>x *= 5;</td>
+			<td>Multiplies x by 5. Equivalent to x = x*5;</td>
+		</tr>
+		<tr><td>x /= 5;</td>
+			<td>Divides x by 5. Equivalent to x = x/5;</td>
+		</tr>
+		<tr><td>x < y</td>
+			<td>true if x is less than y (used in if statements)</td>
+		</tr>
+		<tr><td>x > y</td>
+			<td>true if x is greater than y (used in if statements)</td>
+		</tr>
+		<tr><td>x <= y</td>
+			<td>true if x is less or equal to y (used in if statements)</td>
+		</tr>
+		<tr><td>x >= y</td>
+			<td>true if x is greater or equal to y (used in if statements)</td>
+		</tr>
+	</table>
+</div>
+<br><br><br>
+
+<div class="container" id="math">
+	<h1>Math</h1>
+	You can use + - * and / for simple arithmetic. ** raises a number to a power. 
+	<code>
+		var x = 3**2;
+		console.log(x);
+	</code>
+	What do you expect to see in the console? <div class="hidden">9</div><br><br>
+	<h2>Complex Math</h2>
+	Blue also supports more complex math. Below is a list of math that can be used. You probably won't need all of these functions because they can get quite complex, but they can be helpful!<br>
+	<b>All Premade Math</b>
+	<table>
+		<tr><td>E</td>
+			<td>Euler's Constant</td>
+		</tr>
+		<tr><td>PI</td>
+			<td>Pi</td>
+		</tr>
+		<tr><td>SQRT2</td>
+			<td>Square Root of 2</td>
+		</tr>
+		<tr><td>abs(_)</td>
+			<td>Absolute value of _.</td>
+		</tr>
+		<tr><td>acos(_)</td>
+			<td>Arccosine of _.</td>
+		</tr>
+		<tr><td>asin(_)</td>
+			<td>Arcsin of _.</td>
+		</tr>
+		<tr><td>asinh(_)</td>
+			<td>Hyperbolic arcsin of _.</td>
+		</tr>
+		<tr><td>asin(_)</td>
+			<td>Arcsin of _.</td>
+		</tr>
+		<tr><td>atan(_)</td>
+			<td>Arctangent of _.</td>
+		</tr>
+		<tr><td>atanh(_)</td>
+			<td>Hyperbolic arctangent of _.</td>
+		</tr>
+		<tr><td>cbrt(_)</td>
+			<td>Cube root of _.</td>
+		</tr>
+		<tr><td>ceil(_)</td>
+			<td>Smallest integer greater than or equal to _.</td>
+		</tr>
+		<tr><td>cos(_)</td>
+			<td>Cosine of _.</td>
+		</tr>
+		<tr><td>cosh(_)</td>
+			<td>Hyperbolic cosine of _.</td>
+		</tr>
+		<tr><td>floor(_)</td>
+			<td>Greatest integer less than or equal to _.</td>
+		</tr>
+		<tr><td>hypot(a,b,c...)</td>
+			<td>The nth root of the sum of squares of a,b,c... (where n is the number of a,b,c...).</td>
+		</tr>
+		<tr><td>log(_)</td>
+			<td>Natrual logarithm of _.</td>
+		</tr>
+		<tr><td>log10(_)</td>
+			<td>Base 10 log of _.</td>
+		</tr>
+		<tr><td>log2(_)</td>
+			<td>Base 2 log of _.</td>
+		</tr>
+		<tr><td>max(a,b,c...)</td>
+			<td>The largest number in the list.</td>
+		</tr>
+		<tr><td>min(a,b,c...)</td>
+			<td>The smallest number in the list.</td>
+		</tr>
+		<tr><td>random(_)</td>
+			<td>A random number from 0 to 1.</td>
+		</tr>
+		<tr><td>round(_)</td>
+			<td>_ rounded to the nearest integer.</td>
+		</tr>
+		<tr><td>sign(_)</td>
+			<td>Whether _ is positive, 0, or negative.</td>
+		</tr>
+		<tr><td>sin(_)</td>
+			<td>Sine of _.</td>
+		</tr>
+		<tr><td>sinh(_)</td>
+			<td>Hyperbolic sine of _.</td>
+		</tr>
+		<tr><td>sqrt(_)</td>
+			<td>Square Root of _.</td>
+		</tr>
+		<tr><td>tan(_)</td>
+			<td>Tangent of _.</td>
+		</tr>
+		<tr><td>tanh(_)</td>
+			<td>Hyperbolic tangent of _.</td>
+		</tr>
+	</table>
+	<br>
+	<code>
+		var x = PI + 10;
+		console.log(x);
+	</code>
+	What do you expect to see in the console? <div class="hidden">13.141592653589793</div>
+</div>
+<br><br><br>
+
+<div class="container" id="if">
+	<h1> If and Else </h1>
+	An if statement makes some code only run if something else is true. <br>
+	In order to show what code is in the if statement, and what isn't, we will use this | key. This can be typed by pressing shift and \. The \ key is below the backspace key on most keyboards.
+	<code>
+		if something
+		|//stuff that you want to happen if the if statement is true
+		|//other stuff that you want to happen if the if statement is true
+		|//more stuff that you want to happen if the if statement is true
+		//stuff that is outside of the if statement, so will happen regardless of if the if statement is true.
+	</code>
+	Here is an example:
+	<code>
+		if 1 < 2
+		|console.log("one < two");
+		console.log("this will always be printed!");
+	</code>
+	What do you think will be printed in the console?<br> <div class="hidden" style="display: inline-block;"> one < two <br> this will always be printed!</div>
+	<br><br>
+	<b style="font-size: 20px;"> ELSE</b><br>
+	<span class="inlineCode">else</span> statements are used with the <span class="inlineCode">if</span> statements, but it makes the opposite happen. 
+	<code> 
+		var x = 5;
+		if x < 2 
+		|console.log("x less than two!!"); 
+		else 
+		|console.log("x not less than two!!");
+	</code>
+	What do you think will be printed in the console? <div class="hidden">x not less than two!!</div><br>
+	Try experimenting with different values of x and seeing what will be logged.
+</div>
+<br><br><br>
+
+<div class="container" id="ask">
+	<h1> Ask and Alert </h1>
+	The ask function asks the user a question. 
+	<code>
+		var answer = ask("What is your name?");
+		console.log(answer);
+	</code>
+	Now, you know enough to make a text adventure! To get more used to the commands, do the <a href="dispCode.html?textAdventure">text adventure project</a>!
+	<h2>Alert</h2>
+	The alert function is like ask, but it doesn't have a spot for the user to answer.
+	<code>
+		alert("YOU DIED!! Better luck next time!");
+	</code>
+</div>
+<br><br><br>
+
+<div class="container" id="when">
+	<h1> When </h1>
+	When loops can be used to run code when the user does something!
+	<code>
+		when click
+		|console.log("you clicked!");
+	</code>
+	Put the code that you want to run inside the when loop using the <span class="inlineCode">|</span> symbol like in an if statement.<br>
+	These are the times that when loops can happen:<br>
+	<table>
+		<tr>
+			<td>click</td>
+			<td>Runs when the user clicks.</td>
+		</tr>
+		<tr>
+			<td>drag</td>
+			<td>Runs whenever the user's mouse is down.</td>
+		</tr>
+		<tr>
+			<td>click end</td>
+			<td>Runs whenever the user's mouse come us.</td>
+		</tr>
+		<tr>
+			<td>key pressed</td>
+			<td>Runs when any key is pressed.</td>
+		</tr>
+		<tr>
+			<td>x pressed</td>
+			<td>Runs when the specified letter is pressed. Works for a,b,c,d,e,f...x,y,x.</td>
+		</tr>
+		<tr>
+			<td>left pressed</td>
+			<td>Runs when the specified arrow is pressed. Works for left, right, up, and down.</td>
+		</tr>
+		<tr>
+			<td>space pressed</td>
+			<td>Runs when the space bar is pressed.</td>
+		</tr>
+	</table>
+</div>
+<br><br><br>
+
+<div class="container" id="forever">
+	<h1>Forever Loops</h1>
+	Forever loops make the code inside happen every 0.03 seconds. A <span class="inlineCode">forever</span> loop is the same as a <span class="inlineCode"> repeatEvery 0.03</span> loop.
+	<code>
+		x = 0;
+		forever
+		|x++;
+		|console.log(x);
+	</code>
+</div>
+<br><br><br>
+
+<div class="container" id="repeatEvery">
+	<h1> RepeatEvery Loops </h1>
+	You can use this to make code happen every __ seconds. 
+	<code>
+		var timePassed = 0;
+		repeatEvery 1
+		|timePassed += 1;
+		|console.log(timePassed + " seconds have passed since you started the program!");
+	</code>
+</div>
+<br><br><br>
+
+<div class="container" id="for">
+	<h1> ForEach Loops </h1>
+	ForEach loops make code run many times in a row, slightly differently. 
+	<code>
+		var i;
+		var myList = ["apple","orange","potato","kuma bear","lemon","blue","javascript"];
+		forEach i in myList
+		|console.log(i);
+	</code>
+	The code inside the forEach loop runs 7 times (since <span class="inlineCode">myList</span> has 7 items). Each time, the code runs with <span class="inlineCode">i</span> a different item of <span class="inlineCode">myList</span>.<br><br>
+	The <span class="inlineCode">range(start,end,difference)</span> function returns a list of numbers from <span class="inlineCode">start</span> to <span class="inlineCode">end</span>, each number with a difference of <span class="inlineCode">difference</span>. The difference is optional -- it you omit it, it is automatically one. 
+	<code>
+		var i;
+		forEach i in range(0,10,0.5){
+		|console.log(i);
+	</code>
+</div>
+<br><br><br>
+
+<div class="container" id="Characters">
+	<h1> Creating Characters: Rectangles </h1>
+	A character is a special type of variable.
+	In this tutorial, we will create a rectangle. You can create other shapes, though.
+	Start by defining the character:
+	<code>
+		var myRect = new Rectangle();
+	</code>
+	When you run this code, you will see the default rectangle!<br><br>
+	To change some things about your rectangle, you can use the following things:
+	<code>
+		var myRect = new Rectangle();
+		
+		//change the width
+		myRect.width = 50;
+		
+		//change the height
+		myRect.height = 200;
+		
+		//change the background color.  
+		myRect.color = "red";
+		
+		//change the border width
+		myRect.borderWidth = 5;
+		
+		//change the border color
+		myRect.borderColor = "#000000";
+	</code>
+	Blue uses the same color system as JavaScript. If it is a common color (black, red, blue, etc.) then you can put that color name in quotes. If you don't want to be limited to just those colors, you can use <a href="https://htmlcolorcodes.com">HTML Color Codes</a> to get a hexidecimal. Hexidecimal colors look like 
+	<span class="inlineCode">#1DA2FD</span>. HTML Color Codes explains how hexidecimal color codes work. <br>
+	Whether you use hexidecimal or color names, the color has to be in quotes. <br><br>
+	To change the position of the rectangle, use <span class="inlineCode">characterName.x</span> and <span class="inlineCode">characterName.y</span>. <br>
+	Blue uses the Cartestian Coordinate System (the normal one), so the center of the screen in the point (0,0). The top-left of the screen is around (-300,300) depending on what device you are using. The unit is in pixels, and each screen has a different number of pixels.
+	<code>
+		var myRect = new Rectangle();
+		myRect.x = -300;
+		myRect.y = 300;
+	</code>
+	myRect should be around the top-left corner of the screen. The top-left corner of myRect is at the point (-300, 300). If you can't see myRect then it is probably because your screen is less than 300 pixels on one side. <br>
+	Now try putting myRect at (100,200), (-100,100), and (200, -150).<br>
+	If you want to put <span class="inlineCode">myRect</span> exactly in the top-left corner of the screen, you can use the variables <span class="inlineCode">width</span> and <span class="inlineCode">height</span> which are always exactly the width and height of the entire computer screen. 
+	<code>
+		var myRect = new Rectangle();
+		myRect.x = -width/2; //negative half the screen width
+		myRect.y = -height/2; //negative half the screen height
+	</code>
+</div>
+<br><br><br>
+
+<div class="container" id="circle">
+	<h1> Circles </h1>
+	Circles are basically the same as rectangles. But, instead of <span class="inlineCode">width</span> and <span class="inlineCode">height</span>, we will use <span class="inlineCode">radius</span>. <br>
+	The <span class="inlineCode">color</span>, <span class="inlineCode">borderWidth</span>, <span class="inlineCode">borderColor</span>, <span class="inlineCode">x</span>, and <span class="inlineCode">y</span> are exactly the same. 
+	<code>
+		var myCirc = new Circle();
+		myCirc.radius = 50;
+		myCirc.x = 100; 
+		myCirc.y = 100; 
+	</code>
+</div>
+<br><br><br>
+
+<div class="container" id="text">
+	<h1> Text </h1>
+	Text is similar to the Circle and Rectangle. The <span class="inlineCode">x</span>, <span class="inlineCode">y</span>, and <span class="inlineCode">color</span> are the same. 
+	<code>
+		var myText = new Text();
+
+		//change what is says
+		myText.text = "hello there! This is what I am saying!";
+
+		//change the font size
+		myText.size = 20;
+	</code>
+	The font size is in pixels, too.
+</div>
+<br><br><br>
+
+<div class="container" id="charactersInfo">
+	<h1>What Can Characters Do?</h1>
+	Characters can do a lot of special things!<br>
+	<h2>.copy()</h2>
+	This creates an exact copy of the character. Custom parameters will be copied too.
+	<code>
+		var original = new Rectangle();
+		original.color = "red";
+		original.height = 200;
+		var clone1 = original.copy();
+		clone1.x = 150;
+	</code>
+
+	<h2>.moveInDirection(angle,distance)</h2>
+	This moves something angle&deg; at a distance of distance. For example, 
+	<code>
+		var cent = new Circle();
+		cent.radius = 5;
+		var moved = cent.copy();
+		moved.moveInDirection(30,100);
+	</code>
+	This moves <span class="inlineCode">moved</span> 100 pixels away at a 30&deg; angle.
+
+	<h2>.distanceTo(obj)</h2>
+	This returns the distance between two characters or the mouse.
+	<code>
+		var myText = new Text();
+		forever
+		|myText.text = myText.distanceTo(mouse);
+	</code>
+
+	<h2>.delete()</h2>
+	This deletes the character.
+	<code>
+		var myCirc = new Circle();
+		wait 1
+		|myCirc.delete();
+	</code>
+</div>
+<br><br><br>
+
+<div class="container" id="customProp">
+	<h1> Custom Properties </h1>
+	You can add a custom property to a character. 
+	<code>
+		var char = new Rectangle();
+		char.healthPoints = 100;
+	</code>
+	<span class="inlineCode">char.healthPoints</span> is exactly the same as a variable. You can change it, print it, etc. 
+	If you copy char, the custom properties will be copied too. 
+</div>
+<br><br><br>
+<div class="container" id="moreDataTypes">
+	<h1> More Data Types </h1>
+	Let's take a quick pause from all of the graphics to understand what's happening. In the <a href="#variables">variables</a> section, we talked about some simple data types. Now, we will talk about more complex ones.
+	<table>
+		<tr>
+			<td>Lists</td>
+			<td>Lists store a list of information. They are created using <span class="inlineCode">[]</span> and they can store numbers strings, booleans, or even other lists! You can refer to a single item of a list by saying <span class="inlineCode">myList[number]</span>. This would return the <span class="inlineCode">number-1</span>th item in <span class="inlineCode">myList</span>.
+				<code>
+					var myList = ["apples","bananas","mango","strawberry","lime"];
+					console.log(myList); //this will log the whole list
+					console.log(myList[0]); //this will log the 1st item of myList
+					console.log(myList[1]); //this will log the 2nd item of myList
+					console.log(myList[2]); //this will log the 3rd item of myList
+				</code>
+				Now say you want to add something to your list. Use <span class="inlineCode">push()</span>:
+				<code>
+					var potatoes = ["Yukon Gold","Russet","French Fingerling","Sweet Potato","Red Potato"];
+
+					//Wait! Somebody discovered and named a new type of potato!
+					potatoes.push("Purple Potato");
+					//Let's see what potatoes is now.
+					console.log(potatoes);
+				</code>
+				There are a lot more things you can do with lists <a href="https://www.w3schools.com/js/js_array_methods.asp">here</a>
+			</td>
+		</tr>
+		<tr>
+			<td>Objects</td>
+			<td>
+				Objects store multiple pieces of information. They represent more complex things, like characters or user information. Sometimes, having too many variables can get confusing so you can use objects instead!<br><br>
+				Here is an example of creating an object:
+				<code>
+					var book = {
+					//the information about the object goes inside of curly brackets
+					title: "Harry Potter and the Goblet of Fire", //define each property with :, and separate the different properties with ,
+					author: "J. K. Rowling",
+					length: 734,
+					inSeries: true,
+					genre: "fantasy"
+					}
+					console.log(book);
+				</code>
+				Instead of creating 5 variables <span class="inlineCode">bookTitle</span>, <span class="inlineCode">bookAuthor</span>, <span class="inlineCode">bookLength</span>, etc., we created one object with 5 <span class="inlineCode">properties</span>. When we console <span class="inlineCode">book</span>, we get this expandable object in the console that has all of the properties. <br>
+				Get one property using <span class="inlineCode">.</span>
+				<code>
+					console.log(book.title);
+					console.log(book.author);
+				</code>
+				Each of these properties are exactly like a variable. They can be changed, etc.
+				<code>
+					//changed your mind
+					book.genre = "Sci-fi";
+					console.log(book);
+				</code>
+				Now, when you expand book in the console, you will see that the genre is Sci-fi. Objects are important because each of the characters are actually an object. To see this, try:
+				<code>
+					var myObj = new Circle();
+					console.log(myObj);
+				</code>
+			</td>
+		</tr>
+		<tr>
+			<td>Functions</td>
+			<td>Functions store code, which can be used later. You don't need to know about these now, but there is information <a href="https://www.w3schools.com/js/js_functions.asp">here</a></td>
+		</tr>
+	</table>
+</div>
+<br><br><br>
+
+
+<div class="container" id="mouse">
+	<h1> Mouse </h1>
+	The mouse is a lot like a character, but you can't change it. To find the x and y position of the mouse, use mouse.x and mouse.y.
+	<code>
+		var follower = new Circle();
+		forever
+		|follower.x = mouse.x;
+		|follower.y = mouse.y;
+	</code>
+</div>
+<br><br><br>
+
+<div class="container" id="distances">
+	<h1>Touching and Distances</h1>
+	You can use this to see if two characters are touching or just their distance to each other.
+	<code>
+		var first = new Rectangle();
+		var second = new Rectangle();
+		second.x = 150;
+		console.log(first.distanceTo(second));
+	</code>
+	<span class="inlineCode">First</span> and <span class="inlineCode">second</span> are 150 pixels apart, so you will see 150 in the console.<br>
+	You can also use the distance to see the distance to the mouse.
+	<code>
+		var myText = new Text();
+		forever
+		|myText.text = Math.round(myText.distanceTo(mouse));
+	</code>
+	The <span class="inlineCode">Math.round()</span> is only there so there aren't lots of digits after the number. <br><br>
+	You can also use the distance function to see if two objects are touching.
+	<code>
+		var myCircle = new Circle();
+		myCircle.radius = 100;
+		forever
+		|if myCircle.distanceTo(mouse) < 100
+		||myCircle.color = "red";
+		|else
+		||myCircle.color = "blue";
+	</code>
+	This code makes it so the circle is always red when the mouse is inside it, and always blue when the mouse is outside.
+</div>
+<br><br><br>
+
+<div class="container" id="custom">
+	<h1>Custom Characters</h1>
+	Custom Characters can be used if you want to have a complected character with many parts! <br>
+	An Example:
+	<code>
+		var coolChar = new Custom();
+		coolChar.instructions =
+		|//tell blue how to draw your character
+		|rect(10,10,150,150,"red");
+		|rect(0,20,100,100,"blue");
+
+		forever
+		|coolChar.x += 1; //see how the whole character moves?
+	</code>
+	The <span class="inlineCode">.instructions =</span> starts the piece of code that explains how to draw your character. <br>
+	These positions are always relative to where the character is. For example, when it says the location is <span class="inlineCode">10,10</span>, it really means that the location is<br> <span class="inlineCode">10+(x-position)</span> and <span class="inlineCode">10+(y-position)</span>
+</div>
+<br><br><br>
+
+<h1>Drawing the Custom Character</h1>
+<hr><br><br>
+
+<div class="container" id="rect()">
+	<h1>rect()</h1>
+	The <span class="inlineCode">rect()</span> function draws a rectangle. 
+	<code>
+		var x = new Custom();
+		x.instructions =
+		|rect(x position, y position, width, height, background color, border width, border color);
+	</code>
+	For example, <span class="inlineCode">rect(10,10,100,20,"clear",5,"black");</span>
+	creates a rectangle at the point (10,10) with a width of 10 and height 100. The background color is clear, border width is 5, and border color is black. <br>
+	By default, the background color is black, the border width is 0, and the border color is black.
+</div>
+<br><br><br>
+
+<div class="container" id="oval()">
+	<h1>oval()</h1>
+	The <span class="inlineCode">oval()</span> function draws an oval. 
+	<code>
+		var x = new Custom();
+		x.instructions =
+		|oval(x position, y position, radiusX, radiusY, background color, border width, border color);
+	</code>
+	The circle is the same as the rectangle, but instead of width and height, there are radii. <br>
+	For example, <span class="inlineCode">oval(-100,20,50,50,"clear",5,"black");</span> creates a circle at the point (-100,20) with a radius of 50. The background color is clear, border width is 5, and border color is black. <br>
+	By default, the background color is black, the border width is 0, and the border color is black.
+</div>
+<br><br><br>
+
+<div class="container" id="text()">
+	<h1>text()</h1>
+	The <span class="inlineCode">text()</span> function writes text.
+	<code>
+		var x = new Custom();
+		x.instructions = 
+		|text(to say, x position, y position, color, size);
+	</code>
+	For example, <span class="inlineCode">text("hello", -200, -100, "blue", 15);</span> creates a blue "hello" at the point (-200, 100) in size 15. <br>
+	By default, the color is black and the size is 30. 
+</div>
+<br><br><br>
+
+<div class="container" id="polygon()">
+	<h1>polygon()</h1>
+	The <span class="inlineCode">polygon()</span> function creates a polygon with the points specified.
+	<code>polygon([x1,y1,x2,y2,x3,y3,x4,y4], background color, border width, border color)</code>
+	The polygon does the same with the background color, border width, and border color as the circle and rectangle.<br>
+	For example, <span class="inlineCode">polygon([50,100,50,-100,-50,-50,-100,50], "clear", 5, "blue");</span> creates a clear polygon with the points (50,100), (50,-100), (-50,-50), and (-100,50) with a 5px wide blue border. 
+</div>
+<br><br><br>
+
+<div class="container" id="clones">
+	<h1>Clones</h1>
+	In many games, you want to have many clones of the same enemy or robot. For example, in <a href="dispCode.html?jump">jump</a>, the spikes are clones.<br>
+	First, create a base clone. This one is hidden.
+	<code>
+		var base = new Rectangle();
+		base.color = "red";
+		base.hidden = true;
+	</code>
+	Each of the clones must be stored in a list. If you don't know what a list is, go to the <a href="#moreDataTypes">complex data types section</a>.
+	<code>
+		var clones = []; //create an empty list of clones.
+	</code>
+	Now, we have to add some clones to our list.
+	<code>
+		forEach i in range(0,10,1)
+		|//this code is repeated 10 times
+		|var newClone = base.copy(); //make a new clone
+		|newClone.hidden = false;
+		|clones.push(newClone); //add the new clone to the list of clones.
+	</code>
+	Now we have a bunch of clones, but they are all in the same position. How can we access each clone?
+	<code>
+		repeatEvery 1
+		|//repeat this every second
+		|forEach i in clones //put each clone in a random position
+		||i.x = random()*width/2;
+		||i.y = random()*height/2;
+	</code>
+	Let's say we want to delete all of the clones. 
+	<code>
+		clones = [];
+	</code>
+	Now, none of the clones are moving, but they are still there. Why did this happen? <br>
+	When we removed the items in clones, we removed them from the list, but the clones are still there. What do we do?
+	<code>
+		forEach i in clones
+		|i.delete();
+
+		console.log(clones);
+	</code>
+	Now, when the program runs, the clones are gone! But it also seems like we didn't do anything because the list of clones is still there. This time, we deleted all of the clones, but the deleted clones are still in the list. We can do this with 
+</div>
+<br><br><br>
+
+<div class="container" id="projects">
+	<h1>Projects</h1>
+	<h2><a href="dispCode.html?textAdventure">Text Adventure</a></h2>
+	Create a text adventure where a user can make decisions!
+
+	<h2><a href="dispCode.html?wackamole">Wack a Mole</a></h2>
+	The mole will appear and then disappear and then appear again in a random position. It's lots of fun!
+
+	<h2><a href="dispCode.html?typewriter">Typewriter</a></h2>
+	In this project, you will make a program that logs what you have typed so far. It doesn't need to include all of the letters; just a-z and space.
+
+	<h2><a href="dispCode.html?rain">Rain</a></h2>
+	In this project, try to make random circles fall from the top of the screen with realistic gravity!<br>
+
+	<h2><a href="dispCode.html?typewriter2">Typewriter V.2</a></h2>
+	In this project, try to make a typewriter that displays what you wrote on the screen - not the console. You can copy some of the code from the original typewriter.
+
+	<h2><a href="dispCode.html?jump">Jump</a></h2>
+	In this game, a player will jump with the space bar to avoid the spikes.
+</div>
+<br><br><br>
+<script type="text/javascript" src="syntaxHighlighter.js"></script>
+<link rel="stylesheet" type="text/css" href="syntaxHighlighter.css"></link>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</body>
+</html>
