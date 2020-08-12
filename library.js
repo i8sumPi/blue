@@ -12,6 +12,7 @@ var drawCharactersVar = setInterval(drawCharacters,50);
 var mouse = {x: 0, y: 0};
 var ask = prompt;
 
+
 var mathFunctions = Object.getOwnPropertyNames(Math);
 for (var i = 0; i < mathFunctions.length; i++) {
 	window[mathFunctions[i]] = Math[mathFunctions[i]]; //make all of the math functions global

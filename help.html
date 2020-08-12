@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Blue.js Help</title>
+	<title>Blue Documentation</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style type="text/css">
 		body{
@@ -85,6 +85,7 @@
 </head>
 <body>
 <div id="side">
+	<a class="pageLink" href="index.html"> Start Coding</a>
 	<h2 style="color: white;">All the different tutorials</h2>
 	<a class="pageLink" href="#comment"> Comments</a>
 	<a class="pageLink" href="#console"> Console: print information </a>
@@ -111,12 +112,12 @@
 	<a class="pageLink" href="#text()">&nbsp;&nbsp; Text </a>
 	<a class="pageLink" href="#polygon()">&nbsp;&nbsp; Polygon </a>
 	<a class="pageLink" href="#clones"> Clones </a>
+	<a class="pageLink" href="#publish"> Publishing Project </a>
 	<a class="pageLink" href="#projects"> Projects </a>
 </div>
 <div id="main">
-<h1 id="top"> Welcome To the Blue Help Page</h1>
+<h1 id="top"> Welcome To the Blue Documentation</h1>
 <hr>
-You can read through the entire page as a tutorial for blue.js, or you can read through different parts while making your projects! View the <a href="#projects">projects</a> section for inspiration!
 <br><br>
 <div class="container"  id="comment">
 	<h1> Commenting </h1>
@@ -128,6 +129,7 @@ You can read through the entire page as a tutorial for blue.js, or you can read 
 	//Display pi every second:
 	repeatEvery 1
 	|console.log(PI); //pi
+	//i can write whatever i want here and it will not run !1a@#2f$2%3h^&4s*5(sa!@d6#g$8s%^dsa0&-j*(teer9as#@f#4g$k%i1^qw&
 	</code>
 	You don't have to know how the above code works; it is just an example of how to use comments
 </div>
@@ -465,7 +467,7 @@ You can read through the entire page as a tutorial for blue.js, or you can read 
 	The <span class="inlineCode">range(start,end,difference)</span> function returns a list of numbers from <span class="inlineCode">start</span> to <span class="inlineCode">end</span>, each number with a difference of <span class="inlineCode">difference</span>. The difference is optional -- it you omit it, it is automatically one. 
 	<code>
 		var i;
-		forEach i in range(0,10,0.5){
+		forEach i in range(0,10,0.5)
 		|console.log(i);
 	</code>
 </div>
@@ -474,7 +476,7 @@ You can read through the entire page as a tutorial for blue.js, or you can read 
 <div class="container" id="Characters">
 	<h1> Creating Characters: Rectangles </h1>
 	A character is a special type of variable.
-	In this tutorial, we will create a rectangle. You can create other shapes, though.
+	In this tutorial, we will create a rectangle. You can create other shapes as well in the next few sections.
 	Start by defining the character:
 	<code>
 		var myRect = new Rectangle();
@@ -484,20 +486,15 @@ You can read through the entire page as a tutorial for blue.js, or you can read 
 	<code>
 		var myRect = new Rectangle();
 		
-		//change the width
-		myRect.width = 50;
+		myRect.width = 50; //change the width
 		
-		//change the height
-		myRect.height = 200;
+		myRect.height = 200; //change the height
+
+		myRect.color = "red"; //change the background color
 		
-		//change the background color.  
-		myRect.color = "red";
+		myRect.borderWidth = 5; //change the border width
 		
-		//change the border width
-		myRect.borderWidth = 5;
-		
-		//change the border color
-		myRect.borderColor = "#000000";
+		myRect.borderColor = "#000000"; //change the border color
 	</code>
 	Blue uses the same color system as JavaScript. If it is a common color (black, red, blue, etc.) then you can put that color name in quotes. If you don't want to be limited to just those colors, you can use <a href="https://htmlcolorcodes.com">HTML Color Codes</a> to get a hexidecimal. Hexidecimal colors look like 
 	<span class="inlineCode">#1DA2FD</span>. HTML Color Codes explains how hexidecimal color codes work. <br>
@@ -828,6 +825,15 @@ You can read through the entire page as a tutorial for blue.js, or you can read 
 		console.log(clones);
 	</code>
 	Now, when the program runs, the clones are gone! But it also seems like we didn't do anything because the list of clones is still there. This time, we deleted all of the clones, but the deleted clones are still in the list. We can do this with 
+</div>
+<br><br><br>
+
+<div class="container" id="publish">
+	<h1>Publishing Your Project</h1>
+	You have created an awesome project in Blue, and now you want to share it with your friends! It's actually very easy!<br>
+	First, click on the button <span class="inlineCode">EXPORT TO WEBSITE</span> while editing your project. It is next to the <span class="inlineCode">HELP</span> and <span class="inlineCode">RUN</span> buttons. If it worked, you should get an alert that says "copied to clipboard". Blue just copied the HTML code of your project (the programming language used for websites) which can be published. There are many ways to publish HTML (also called static) websites which are more complicated such as <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website#Publishing_via_GitHub">Github Pages</a> and <a href="https://godaddy.com/">GoDaddy</a>. 
+<br><br>
+	However, the easiest way is using <a href="https://jsbin.com/?html,output">JS Bin</a>. First, log into JS Bin or create an account. Then, paste the HTML into the HTML section of your project. When you first run the code, sometimes it doesn't do anything (don't worry if this happens, it's totally normal). Go to <span class="inlineCode">File</span>, <span class="inlineCode">Save snapshot</span>. This saves the project and creates a link for you to see it in a new page. In order to see it run in a new page, click on the <span class="inlineCode">&#8599;</span>, next to <span class="inlineCode">Auto-run JS</span> and <span class="inlineCode">Run with JS</span>. Once you open it in a new page, you can share your project with friends by sending them the link!
 </div>
 <br><br><br>
 

@@ -76,7 +76,7 @@ function showAllProjects(){
 	el("allProjectButtons").innerHTML = allProjectButtons;
 	var bigProjectButtons = document.getElementsByClassName("project");
 	for (var i = 0; i < bigProjectButtons.length; i++) {
-		bigProjectButtons[i].style.width = width-120 + "px";
+		bigProjectButtons[i].style.width = width-150 + "px";
 	}
 }
 function startProject(i){

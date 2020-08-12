@@ -16,6 +16,10 @@ function highlight(toH){
 	toR = replSymb(toR); 
 	toR = replace(toR, "\n", "</div><div>");
 
+	if(toR.slice(0,6) == "</div>"){
+		toR = "<div>"+toR;
+	}
+
 	functions(); //highlight all of the functions
 	colorW(["&equals;","!","+","-","*","^","%","$","&lt","&gt","&amp"],"pink"); //makes all operators pink
 	colorW(["when click end","when click","when drag","when key pressed","when left pressed","when right pressed","when up pressed","when down pressed","when space pressed",
